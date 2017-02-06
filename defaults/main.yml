@@ -1,0 +1,9 @@
+---
+proxy_http: http://proxy.tld:8080
+proxy_https: "{{ proxy_http }}"
+
+proxy_package_manager: yes
+
+proxy_no_proxy:
+  - 127.0.0.1
+  - localhost
