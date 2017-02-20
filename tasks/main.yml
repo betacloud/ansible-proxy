@@ -5,11 +5,22 @@
   include: "{{ ansible_os_family }}.yml"
   when: proxy_package_manager|bool
 
-- name: Copy environment file for system wide settings
-  template:
-    src: environment.j2
+- name: Set system wide settings in environment file
+  blockinfile:
     dest: /etc/environment
-    owner: root
-    group: root
-    mode: 0644
+    marker: "# {mark} ANSIBLE MANAGED BLOCK (betacloud.proxy)"
+    block: |
+      export http_proxy={{ proxy_http }}
+      export HTTP_PROXY={{ proxy_http }}
+
+      export https_proxy={{ proxy_https|default(proxy_http) }}
+      export HTTPS_PROXY={{ proxy_https|default(proxy_http) }}
+
+      export ftp_proxy={{ proxy_http }}
+      export FTP_PROXY={{ proxy_http }}
+
+      export rsync_proxy={{ proxy_http }}
+      export RSYNC_PROXY={{ proxy_http }}
+
+      export no_proxy={{ proxy_no_proxy|join(',') }}
   become: true
