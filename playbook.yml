@@ -12,8 +12,8 @@
 
 - hosts: ubuntu
   roles:
-  - role: ansible-betacloud.proxy
+  - role: ansible-proxy
 
 - hosts: centos
   roles:
-  - role: ansible-betacloud.proxy
+  - role: ansible-proxy
