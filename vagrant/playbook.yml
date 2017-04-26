@@ -1,5 +1,5 @@
 ---
-- name: Install python version 2
+- name: Install python version 2 on ubuntu
   hosts: all
   gather_facts: no
 
