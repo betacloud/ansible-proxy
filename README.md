@@ -11,20 +11,6 @@ Supported Linux distributions
 * Ubuntu 16.04 (Xenial)
 * CentOS 7
 
-Example Playbook
-----------------
-
-```yml
-- hosts: all
-
-  vars:
-    proxy_http: http://proxy.tld:8080
-    proxy_https: http://proxy.tld:8080
-
-  roles:
-  - role: betacloud.proxy
-```
-
 License
 -------
 
