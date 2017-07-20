@@ -1,9 +1,7 @@
-# Ansible betacloud.proxy
+# Ansible osism.proxy
 
 ![Ansible 2.2](https://img.shields.io/badge/Ansible-2.2-green.png?style=flat)
 ![Ansible 2.3](https://img.shields.io/badge/Ansible-2.3-green.png?style=flat)
-
-This is an Ansible role that set proxy parameters on Ubuntu and CentOS servers.
 
 Supported Linux distributions
 -----------------------------
@@ -27,4 +25,4 @@ limitations under the License.
 Author information
 ------------------
 
-This role was created by [Betacloud Solutions GmbH](https://betacloud-solutions.de).
+This role was created by [Betacloud Solutions GmbH](https://www.betacloud-solutions.de).
