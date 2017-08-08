@@ -1,7 +1,7 @@
 ---
 proxy_http: http://proxy.tld:8080
-proxy_ftp: "{{ proxy_http }}"
 proxy_https: "{{ proxy_http }}"
+proxy_ftp: "{{ proxy_http }}"
 
 proxy_package_manager: yes
 
