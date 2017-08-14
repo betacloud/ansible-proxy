@@ -24,3 +24,6 @@
 
       export no_proxy={{ proxy_no_proxy|join(',') }}
   become: true
+
+# - name: Configure proxy parameters for pip
+#  when: proxy_package_manager|bool
