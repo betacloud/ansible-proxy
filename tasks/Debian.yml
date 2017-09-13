@@ -7,3 +7,4 @@
     group: root
     mode: 0644
   become: true
+  when: proxy_proxies != {}

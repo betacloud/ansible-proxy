@@ -6,13 +6,16 @@
     option: enabled
     value: 0
   become: true
+  when: proxy_proxies != {}
 
 # NOTE: parameter dest will change to path in 2.3
+
 - name: Configure proxy parameters for yum
   ini_file:
     dest: /etc/yum.conf
     section: main
     option: proxy
-    value: "{{ proxy_https|default(proxy_http) }}"
+    value: "{{ proxy_proxies['https']default(proxy_proxies['http']) }}"
     mode: 0644
   become: true
+  when: proxy_proxies != {}
