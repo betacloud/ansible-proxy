@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/osism/ansible-proxy.svg?branch=master)](https://travis-ci.org/osism/ansible-proxy)
 [![Ansible Galaxy](https://img.shields.io/badge/Ansible%20Galaxy-osism.proxy-blue.svg)](https://galaxy.ansible.com/osism/proxy/)
 ![Ansible 2.2](https://img.shields.io/badge/Ansible-2.2-green.png?style=flat)
-![Ansible 2.3](https://img.shields.io/badge/Ansible-2.3-green.png?style=flat)
+![Ansible 2.4](https://img.shields.io/badge/Ansible-2.4-green.png?style=flat)
 
 License
 -------
