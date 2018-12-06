@@ -1,3 +1,3 @@
 ---
-travis_decrypt_key: 4c24d3121ad1
 ansible_role_name: proxy
+travis_decrypt_key: 4c24d3121ad1
