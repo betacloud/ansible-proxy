@@ -8,18 +8,18 @@
     dest: /etc/environment
     marker: "# {mark} ANSIBLE MANAGED BLOCK (osism.proxy)"
     block: |
-      export http_proxy={{ proxy_proxies['http']  }}
-      export HTTP_PROXY={{ proxy_proxies['http']  }}
+      http_proxy={{ proxy_proxies['http']  }}
+      HTTP_PROXY={{ proxy_proxies['http']  }}
 
-      export https_proxy={{ proxy_proxies['https'] |default(proxy_proxies['http'] ) }}
-      export HTTPS_PROXY={{ proxy_proxies['https'] |default(proxy_proxies['http'] ) }}
+      https_proxy={{ proxy_proxies['https'] |default(proxy_proxies['http'] ) }}
+      HTTPS_PROXY={{ proxy_proxies['https'] |default(proxy_proxies['http'] ) }}
 
-      export ftp_proxy={{ proxy_proxies['http']  }}
-      export FTP_PROXY={{ proxy_proxies['http']  }}
+      ftp_proxy={{ proxy_proxies['http']  }}
+      FTP_PROXY={{ proxy_proxies['http']  }}
 
-      export rsync_proxy={{ proxy_proxies['http'] }}
-      export RSYNC_PROXY={{ proxy_proxies['http']  }}
+      rsync_proxy={{ proxy_proxies['http'] }}
+      RSYNC_PROXY={{ proxy_proxies['http']  }}
 
-      export no_proxy={{ proxy_no_proxy|join(',') }}
+      no_proxy={{ proxy_no_proxy|join(',') }}
   become: true
   when: proxy_proxies != {}
