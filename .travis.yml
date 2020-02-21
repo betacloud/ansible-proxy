@@ -2,10 +2,6 @@
 dist: bionic
 language: python
 
-cache:
-  directories:
-    - $HOME/.cache/pip
-
 before_install:
   - openssl aes-256-cbc -K $encrypted_4c24d3121ad1_key -iv $encrypted_4c24d3121ad1_iv -in molecule/default/clouds.yml.enc -out molecule/default/clouds.yml -d
 
